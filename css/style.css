@@ -19,7 +19,30 @@
 	1. Google Fonts Import
 */
 @import 'https://fonts.googleapis.com/css?family=Roboto:300,400';
-@import 'https://fonts.googleapis.com/css?family=Lora:400,400italic';
+
+@font-face {
+    font-family: 'Alegreya Sans';
+    src: url('../fonts/AlegreyaSans-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans';
+    src: url('../fonts/AlegreyaSans-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Alegreya Sans';
+    src: url('../fonts/AlegreyaSans-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
 
 /*
 	2. Common Styles
@@ -28,6 +51,123 @@
 body {
     font-family: 'Roboto', 'Tahoma', 'Arial', sans-serif;
     font-weight: 300;
+}
+
+.project-lightbox {
+    width: min(1120px, calc(100% - 32px));
+    max-height: 90vh;
+    margin: 32px auto;
+    overflow: auto;
+    background: #f3f3f3;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+}
+
+.project-lightbox-header {
+    padding: 64px clamp(28px, 7vw, 80px);
+    border-bottom: 1px solid #e2e2e2;
+    background: #fff;
+}
+
+.project-lightbox-header h2 {
+    max-width: 760px;
+    margin: 0 0 20px;
+    color: #0e0e0e;
+    font-size: clamp(30px, 4.5vw, 54px);
+    line-height: 1.2;
+}
+
+.project-lightbox-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 20px;
+}
+
+.project-lightbox-tags span {
+    padding: 6px 10px;
+    border-radius: 2px;
+    background: #e8e8e8;
+    color: #626262;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.project-lightbox-header .project-lightbox-lead {
+    max-width: 760px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.project-lightbox > img,
+.project-lightbox-media-grid img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.project-lightbox-copy {
+    padding: 56px clamp(28px, 7vw, 80px);
+    background: #fff;
+}
+
+.project-lightbox-copy h3 {
+    max-width: 760px;
+    margin: 0 0 16px;
+    color: #0e0e0e;
+    line-height: 1.35;
+}
+
+.project-lightbox-copy p {
+    max-width: 760px;
+    margin: 0 0 18px;
+    color: #5f7085;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.project-lightbox-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.project-lightbox-copy--accent {
+    background: #151515;
+}
+
+.project-lightbox-copy--accent h3 {
+    color: #fff;
+}
+
+.project-lightbox-copy--accent p {
+    color: #d0d0d0;
+}
+
+.project-lightbox-media-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 1px;
+    background: #dfe5ec;
+}
+
+@media (max-width: 720px) {
+    .project-lightbox {
+        width: calc(100% - 16px);
+        margin: 8px auto;
+    }
+
+    .project-lightbox-header,
+    .project-lightbox-copy {
+        padding: 36px 24px;
+    }
+
+    .project-lightbox-media-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .global-outer {
@@ -48,10 +188,10 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 300;
+    font-weight: 700;
     line-height: 1.8;
     color: #0e0e0e;
-    font-family: 'Lora', serif;
+    font-family: 'Alegreya Sans', 'Roboto', 'Tahoma', 'Arial', sans-serif;
 }
 
 h1 {
@@ -2285,7 +2425,7 @@ h3#find-me {
     }
 
     #sidebar nav ul li.dropdown {
-        poisiion: relative;
+        position: relative;
         margin-right: 17px;
     }
 

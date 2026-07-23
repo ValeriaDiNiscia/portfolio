@@ -96,5 +96,10 @@ jQuery(function($) {
 		projectCarousel();
 		projectGallery();
 		animsition();
+		$('.carto-popup').magnificPopup({
+			type: 'inline',
+			closeBtnInside: true,
+			mainClass: 'mfp-fade'
+		});
 	});
 });
