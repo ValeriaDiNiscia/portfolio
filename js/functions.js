@@ -66,15 +66,18 @@ jQuery(function($) {
 		Isotope
 	*/
 	var isotope = function() {
-		var $grid = $('#works-grid');
+		var $grids = $('.works-grid');
 		var $filter = $('#works-filter');
 
-		$grid.imagesLoaded(function() {
-			$grid.isotope({
-				itemSelector: '.works-item',
-				masonry: {
-					gutter: '.gutter'
-				}
+		$grids.each(function() {
+			var $grid = $(this);
+			$grid.imagesLoaded(function() {
+				$grid.isotope({
+					itemSelector: '.works-item',
+					masonry: {
+						gutter: '.gutter'
+					}
+				});
 			});
 		});
 
@@ -82,8 +85,13 @@ jQuery(function($) {
 			$filter.find('ul li').removeClass('active');
 			$(this).addClass('active');
 			var category = $(this).attr('data-filter');
-			$grid.isotope({
-				filter: category
+			$grids.each(function() {
+				var $grid = $(this);
+				var hasMatches = category === '*' || $grid.find(category).length > 0;
+				$grid.closest('.work-section').toggleClass('is-empty', !hasMatches);
+				$grid.isotope({
+					filter: category
+				});
 			});
 			return false;
 		});
@@ -96,10 +104,29 @@ jQuery(function($) {
 		projectCarousel();
 		projectGallery();
 		animsition();
-		$('.carto-popup').magnificPopup({
+		$('.project-popup').magnificPopup({
 			type: 'inline',
 			closeBtnInside: true,
-			mainClass: 'mfp-fade'
+			mainClass: 'mfp-fade',
+			callbacks: {
+				open: function() {
+					this.content.find('video[data-autoplay]').each(function() {
+						var video = this;
+						video.currentTime = 0;
+						var playPromise = video.play();
+						if (playPromise) {
+							playPromise.catch(function() {});
+						}
+					});
+				},
+				close: function() {
+					this.content.find('video[data-autoplay]').each(function() {
+						var video = this;
+						video.pause();
+						video.currentTime = 0;
+					});
+				}
+			}
 		});
 	});
 });

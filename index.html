@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="css/fontello.min.css">
 	<link rel="stylesheet" href="css/magnific-popup.min.css">
 	<link rel="stylesheet" href="css/animsition.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/style.css?v=20260731-5">
 </head>
 
 <body id="index-page">
@@ -46,6 +46,7 @@
 								<li data-filter=".socialMedia">Social Media</li>
 								<li data-filter=".typography">Typography</li>
 								<li data-filter=".audiovisual">Audiovisual</li>
+								<li data-filter=".eventDesign">Event Design</li>
 								<li data-filter=".webDesign">Web Design</li>
 							</ul>
 						</div>
@@ -57,22 +58,53 @@
 					<div class="container-fluid">
 						<div class="row">
 							<div class="col-md-12">
-								<div id="works-grid">
-									<div class="gutter"></div>
-									<a class="works-item carto-popup webDesign" href="#carto-project">
-										<div class="picture">
-											<div class="content">
-												<div class="text">
-													<h2>CARTO - Website redesign and migration</h2>
-													<ul>
-														<li>Web Design</li>
-													</ul>
+								<section class="work-section work-section--highlights">
+									<div class="work-section-heading">
+										<h1>Highlights</h1>
+									</div>
+									<div id="highlights-grid" class="works-grid">
+										<div class="gutter"></div>
+										<a class="works-item eventDesign branding webDesign audiovisual"
+											href="projects/spatial-data-science-conference.html"
+											aria-label="View the Spatial Data Science Conference case study">
+											<div class="picture">
+												<div class="content">
+													<div class="text">
+														<h2>Spatial Data Science Conference</h2>
+														<ul>
+															<li>Event Design</li>
+															<li>Web Design</li>
+														</ul>
+													</div>
 												</div>
+												<img src="./img/sdsc-thumbnail.jpg"
+													alt="Spatial Data Science Conference visual identity featuring a map of London">
 											</div>
-											<img src="./img/carto-thumbnail.png"
-												alt="CARTO website redesign thumbnail with a map of New York">
-										</div>
-									</a><a class="works-item smooth-leave branding" href="https://www.behance.net/gallery/122758589/Social-Media-Hey-Foodie-Restaurants">
+										</a>
+										<a class="works-item webDesign" href="projects/carto-website-redesign.html"
+											aria-label="View the CARTO website redesign and migration case study">
+											<div class="picture">
+												<div class="content">
+													<div class="text">
+														<h2>CARTO - Website redesign and migration</h2>
+														<ul>
+															<li>Web Design</li>
+														</ul>
+													</div>
+												</div>
+												<img src="./img/carto-thumbnail.png"
+													alt="CARTO website redesign thumbnail with a map of New York">
+											</div>
+										</a>
+									</div>
+								</section>
+								<section class="work-section">
+									<div class="work-section-heading">
+										<h2>More work</h2>
+									</div>
+									<div id="works-grid" class="works-grid">
+										<div class="gutter"></div>
+									<a class="works-item smooth-leave branding" href="https://www.behance.net/gallery/122758589/Social-Media-Hey-Foodie-Restaurants">
 										<div class="picture">
 											<div class="content">
 												<div class="text">
@@ -176,7 +208,8 @@
 											</div><img src="./img/BRANDING-4.png" alt="Logotype for kindergarten ImaginArte">
 										</div>
 									</a>
-								</div>
+									</div>
+								</section>
 							</div>
 						</div>
 					</div>
@@ -199,59 +232,6 @@
 		</span>
 	</div>
 	<script src="js/plugins.min.js"></script>
-	<script src="js/functions.js"></script>
-	<div id="carto-project" class="mfp-hide project-lightbox">
-		<div class="project-lightbox-header">
-			<div class="project-lightbox-tags" aria-label="Project disciplines">
-				<span>Website redesign</span>
-				<span>Design system</span>
-				<span>Platform migration</span>
-			</div>
-			<h2>CARTO - Website redesign and migration</h2>
-			<p class="project-lightbox-lead">
-				A modernized digital presence built around a clear principle: place the product at the center of
-				the story.
-			</p>
-		</div>
-
-		<img src="./img/carto-website-macbook.jpg"
-			alt="CARTO website redesign displayed on a MacBook Pro">
-
-		<img src="./img/carto-website-pages.png"
-			alt="Overview of the redesigned CARTO homepage, use case, industry and product pages">
-
-		<div class="project-lightbox-copy">
-			<h3>A clearer product story</h3>
-			<p>
-				The redesign needed to communicate CARTO's leading position in spatial data science while creating
-				a flexible system of reusable components. The result was a consistent global website that could
-				evolve continuously alongside the company's marketing ecosystem.
-			</p>
-			<p>
-				A cleaner visual language, stronger hierarchy and reusable page patterns created consistency across
-				the homepage, product pages, solutions, industries and campaigns.
-			</p>
-		</div>
-
-		<img src="./img/carto-website-headers.png"
-			alt="Four redesigned CARTO landing page headers for enterprise, data, cloud and developer audiences">
-
-		<div class="project-lightbox-copy project-lightbox-copy--accent">
-			<h3>Redesigning the platform</h3>
-			<p>
-				The work included two major redesign and migration initiatives. The website first moved to Webflow
-				to support faster publishing and more flexible page creation, then evolved into a GitHub based
-				workflow that brought marketing and engineering closer together while preserving a consistent user
-				experience.
-			</p>
-		</div>
-
-		<div class="project-lightbox-media-grid">
-			<img src="./img/carto-website-devices.png"
-				alt="CARTO website redesign displayed on two laptop mockups">
-			<img src="./img/carto-website-mobile.png"
-				alt="Responsive CARTO website redesign displayed across mobile phone mockups">
-		</div>
-	</div>
+	<script src="js/functions.js?v=20260730-1"></script>
 </body>
 </html>
