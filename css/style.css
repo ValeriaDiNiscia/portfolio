@@ -231,9 +231,11 @@ body {
 
 .project-lightbox-video--components {
     width: 100%;
-    aspect-ratio: 2000 / 1816;
+    aspect-ratio: 1800 / 768;
     margin: 0;
-    background: #000;
+    background: #fff;
+    -webkit-clip-path: inset(0 1px);
+            clip-path: inset(0 1px);
 }
 
 .project-lightbox-components-overview {
